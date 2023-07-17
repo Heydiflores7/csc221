@@ -13,9 +13,10 @@ while guess != number:
     print("That's too low")
     guess = int(input("Try again: "))
     guesses = guesses +1
-   else:
+   if number == guess:
     print("Genius, your guess is right!")
     print("You took", guesses, "guesses!")
+
 
 from gasp.utils import read_yesorno
 if read_yesorno('Would you like to play another game?: '):
