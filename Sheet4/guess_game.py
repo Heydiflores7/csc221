@@ -5,16 +5,23 @@ print("OK, I've thought of a number between 1 and 1000")
 guess= int(input("Take a guess: "))
 
 while guess != number: 
-  if guess > number:
+   if guess > number:
     print("That's too high")
-    guess = input("Try again")
+    guess = int(input("Try again: "))
     guesses = guesses +1
-
-  elif guess < number:
+   elif guess < number:
     print("That's too low")
-    guess = input("Try again")
+    guess = int(input("Try again: "))
     guesses = guesses +1
-  else:
-    print ("Genius, your guess is right!")
+   else:
+    print("Genius, your guess is right!")
+    print("You took", guesses, "guesses!")
 
-print("You took", guesses, "guesses!")
+from gasp.utils import read_yesorno
+if read_yesorno('Would you like to play another game?: '):
+  print ('I know you like it')
+else:
+  print ("OK, bye")
+
+
+                     
