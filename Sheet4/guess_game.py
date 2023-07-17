@@ -20,6 +20,6 @@ while guess != number:
 
 from gasp.utils import read_yesorno
 if read_yesorno('Would you like to play another game?: '):
-  print ('I know you like it') 
+  print ("I know you like it.") 
 else:
-  print ("OK, bye")
+  print ("OK, bye.")
