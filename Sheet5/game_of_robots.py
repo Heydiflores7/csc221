@@ -8,6 +8,13 @@ def draw_grid():
     for y in range(0, 480, 10):
         Line((0,y), (640, y), thickness=0.02, color=color.BLUE)
 
+def place_robot():
+    global robot_1, robot_2, player_shape
+    print("Hey, you")
+    robot_1 = randint(0, 63)
+    robot_2 = randint(0, 47)
+    player_shape = Circle((10 * robot_1 + 5, 10 * robot_2 +5 ), 5, filled=True, color=color.BLUE)
+    
 def place_player():
     global player_x, player_y, player_shape
     print("I'm right here!")
@@ -31,12 +38,13 @@ def move_player():
         player_y += 2
     if key == 's':
         player_y += -2
-        
+
     move_to(player_shape, (10 * player_x + 5, 10 * player_y + 5))
 
 
 begin_graphics()
 finished = False
+place_robot()
 place_player()
 draw_grid()
 
