@@ -23,9 +23,12 @@ def move_player():
     key = update_when('key_pressed')
     if key == 'q':
         finished = True
-    if key == 'd':
+    elif key == 'd':
         player_x += 1
-
+    elif key == 'f':
+        player_x += 1
+    elif key == 'r':
+        player_y += 2
     move_to(player_shape, (10 * player_x + 5, 10 * player_y + 5))
 
 
