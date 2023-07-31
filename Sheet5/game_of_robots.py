@@ -25,24 +25,26 @@ def place_player():
 
 def move_player():
     global finished, player_shape, player_x, player_y
-
     print("I'm moving to...")
     key = update_when('key_pressed')
     if key == 'q':
         finished = True
     if key == 'd':
-        player_x += 2
+        player_x += 1
     if key == 'a':
-        player_x += -2
+        player_x += -1
     if key == 'w':
-        player_y += 2
+        player_y += 1
     if key == 's':
-        player_y += -2
-
+        player_y += -1
     move_to(player_shape, (10 * player_x + 5, 10 * player_y + 5))
+
+def move_robots() :
+    global robots
 
 
 begin_graphics()
+
 finished = False
 place_robot()
 place_player()
